@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="styles.css">
     <title>Landing Page</title>
+    <style>
+      .active {
+        font-weight: bold;
+        color: red;
+      }
+    </style>
   </head>
   <body>
     <header id="header">
@@ -17,11 +23,13 @@
         </ul>
       </nav>
     </header>
-    <form id="form" action="https://www.freecodecamp.com/email-submit">
+    
+    <form id="form" action="https://www.freecodecamp.com/email-submit" onsubmit="return validateForm()">
       <h3>Be selected to win a free box!</h3>
-      <input id="email" name="email" placeholder="Enter your email address" type="email"/>
-      <input type="submit" id="submit"/>
+      <input id="email" name="email" placeholder="Enter your email address" type="email" required/>
+      <input type="submit" id="submit" value="Submit"/>
     </form>
+    
     <section id="Treats">
       <div id="Straw">
         <img src="https://media.istockphoto.com/illustrations/watercolor-strawberry-illustration-id1200128090?k=20&m=1200128090&s=170667a&w=0&h=MtZiH_yfKLkmdXSgOwImGOwahK5eMUv2U3OKNcZqV0o=" id="straw-img" width="200px"/>
@@ -41,14 +49,16 @@
         <img src="http://sc04.alicdn.com/kf/Hf7746efbd420477ab3a1eaddd20849f3t.jpg" width="200px" id="inject-img"/>
         <div id="inject-text">
         <h3>Injectors</h3>
-        <p>You can choose to add injecters into your fruit or on the side with choices of <em>Tito's Vodka, Hennessy, or Pink Champagne</em>!</p>
+        <p>You can choose to add injectors into your fruit or on the side with choices of <em>Tito's Vodka, Hennessy, or Pink Champagne</em>!</p>
         </div>
       </div>
     </section>
+    
     <video id="video" width="" controls>
       <source src="movie.mp4" type="video/mp4">
       <source src="movie.ogg" type="video/ogg">
     </video>
+    
     <section id="Pricing">
       <div>
         <header>6 Pack</header>
@@ -67,8 +77,37 @@
         <p>Champagne - <strong>$2 </strong>each</p>
       </div>
     </section>
+    
     <section id="Delivery">
       <h3>Can Deliver orders that are $20 and up for FREE! Orders under $20 will pay a delivery fee of $5.</h3>
     </section>
+    
+    <script>
+      // Form validation function
+      function validateForm() {
+        const emailInput = document.getElementById('email');
+        const emailValue = emailInput.value;
+        
+        // Basic regex for email validation
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        
+        if (!emailRegex.test(emailValue)) {
+          alert('Please enter a valid email address.');
+          return false; // Prevent form submission
+        }
+        
+        alert('Thank you for your submission!');
+        return true; // Allow form submission
+      }
+
+      // Highlight the active nav link
+      const navLinks = document.querySelectorAll('.nav-link');
+      navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+          navLinks.forEach(link => link.classList.remove('active'));
+          this.classList.add('active');
+        });
+      });
+    </script>
   </body>
 </html>
