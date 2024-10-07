@@ -73,10 +73,22 @@ h3, p {
   height: 500px;
   width: 800px; 
 }
-#Straw, #marsh, #injectors {
+
+#Straw {
+  display: flex;
+  justify-content: left;
+}
+
+#marsh {
   display: flex;
   justify-content: center;
 }
+
+#injectors {
+  display: flex;
+  justify-content: right;
+}
+
 #straw-text, #marsh-text, #inject-text {
   margin-top: 50px;
   margin-left: 50px;
