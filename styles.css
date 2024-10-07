@@ -118,8 +118,8 @@ h3, p {
 }
 
 @keyframes floatText {
-  10% {
-    transform: translateX(-100vw)
+  0% {
+    transform: translateX(-90vw)
   }
   100% {
     transform: translateX(100vw)
