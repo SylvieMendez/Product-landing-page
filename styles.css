@@ -46,6 +46,25 @@ h3 {
 h3, p {
   margin: 0;
 }
+
+#email {
+  border-radius: 30px;
+  width: 300px;
+  padding: 10px 20px;
+  box-sizing: border-box;
+}
+
+#submit {
+  border-radius: 30px;
+  padding: 10px 20px;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+#submit:hover {
+  background-color: #555;
+}
+
 #Treats {
   margin: 30px auto;
   margin-bottom: none;
@@ -108,7 +127,7 @@ h3, p {
 
 .floating-words {
   display: inline-block;
-  animation: floatText 10s linear infinite;
+  animation: floatText 15s linear infinite;
 }
 
 .floating-words h3 {
