@@ -103,12 +103,12 @@ h3, p {
   width: 100%;
   overflow: hidden;
   whitespace: no-wrap;
-  padding: 80px 20px;
+  z-index: 1;
 }
 
 .floating-words {
   display: inline-block;
-  animation: floatText 15s linear infinite;
+  animation: floatText 10s linear infinite;
 }
 
 .floating-words h3 {
