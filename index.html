@@ -25,7 +25,11 @@
     </header>
     
     <form id="form" action="https://www.freecodecamp.com/email-submit" onsubmit="return validateForm()">
-      <h3 id="free">Be selected to win a free box!</h3>
+      <div class="floating-container">
+        <div class="floating-words">
+          <h3>Be selected to win a free box!</h3>
+        </div>
+      </div>
       <input id="email" name="email" placeholder="Enter your email address" type="email" required/>
       <input type="submit" id="submit" value="Submit"/>
     </form>
