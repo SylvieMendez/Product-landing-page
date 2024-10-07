@@ -109,7 +109,7 @@ h3, p {
   animation: floatText 15s linear infinite;
 }
 
-.floating-words p {
+.floating-words h3 {
   margin-right: 50px;
   font-size: 2em;
   font-weight: bold;
