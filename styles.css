@@ -98,6 +98,32 @@ h3, p {
   text-align: center;
 }
 
+.floating-container {
+  width: 100%;
+  overflow: hidden;
+  whitespace: no-wrap;
+}
+
+.floating-words {
+  display: inline-block;
+  animation: floatText 15s linear infinite;
+}
+
+.floating-words p {
+  margin-right: 50px;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+@keyframes floatText {
+  0% {
+    transform: translateX(100%)
+  }
+  100% {
+    transform: translateX(-100%)
+  }
+}
+
 @media (max-width: 1000px) {
   body {
     width: 800px;
